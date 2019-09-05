@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="79190cb5-59f8-4675-b2a9-e2a466a6855e" name="proway-api" url="http://52.199.195.19">
+        <fileTransfer host="52.199.195.19" port="22" privateKey="$USER_HOME$/.ssh/teamlab-internship.pem" rootFolder="/var/www/proway-api" accessType="SFTP" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
