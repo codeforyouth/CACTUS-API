@@ -27,4 +27,9 @@ class Project extends Model
     {
         return $this->hasMany('App\Models\Review');
     }
+
+    public function creator()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
