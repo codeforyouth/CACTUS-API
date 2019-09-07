@@ -35,4 +35,16 @@ class ProjectRepository
 
         return $data;
     }
+
+    public function getProjectById($project_id){
+
+        $model = $this->project::with($this->_getRelation());
+
+        $data = $model
+            ->where('id', $project_id)
+            ->firstOrFail()
+            ->toArray();
+
+        return $data;
+    }
 }

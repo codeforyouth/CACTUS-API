@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Repositories\ProjectRepository;
+use phpDocumentor\Reflection\Types\Integer;
 
 class ProjectService
 {
@@ -16,6 +17,12 @@ class ProjectService
     public function searchProjects(array $params = []){
 
         return $this->project_repository->searchProjects($params);
+
+    }
+
+    public function getProjectById($project_id){
+
+        return $this->project_repository->getProjectById($project_id);
 
     }
 }
