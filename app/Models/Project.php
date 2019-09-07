@@ -28,6 +28,11 @@ class Project extends Model
         return $this->hasMany('App\Models\Review');
     }
 
+    public function images()
+    {
+        return $this->hasMany('App\Models\ProjectImage');
+    }
+
     public function creator()
     {
         return $this->belongsTo('App\Models\User');

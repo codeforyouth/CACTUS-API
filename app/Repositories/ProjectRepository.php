@@ -13,7 +13,8 @@ class ProjectRepository
             'reviews',
             'codings',
             'tags',
-            'problems'
+            'problems',
+            'images'
         ];
     }
 
