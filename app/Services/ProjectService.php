@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Repositories\ProjectRepository;
-use phpDocumentor\Reflection\Types\Integer;
 
 class ProjectService
 {
