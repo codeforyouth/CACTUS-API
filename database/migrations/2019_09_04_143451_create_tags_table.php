@@ -16,6 +16,15 @@ class CreateTagsTable extends Migration
         Schema::create('tags', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name', 50);
+            $table->text('description');
+            $table->text('img_url');
+            $table->string('color', 7);
+            $table->timestamps();
+        });
+
+        Schema::create('project_tag', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->integer('tag_id');
             $table->integer('project_id');
             $table->timestamps();
         });
@@ -29,5 +38,6 @@ class CreateTagsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('tags');
+        Schema::dropIfExists('project_tags');
     }
 }
