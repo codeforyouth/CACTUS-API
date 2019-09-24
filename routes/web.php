@@ -17,3 +17,7 @@ Route::get ('/projects', 'ProjectController@index');
 Route::get ('/projects/{project_id}', 'ProjectController@show');
 
 Route::get ('/tags/{tag_name}', 'TagController@show');
+
+//Login
+Route::get('/oauth/login/redirect', 'Auth\LoginController@getRedirectUrl');
+Route::get('/oauth/login/callback', 'Auth\LoginController@handleProviderCallback');

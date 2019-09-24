@@ -10,7 +10,8 @@ class TagRepository
     private function _getRelation()
     {
         return [
-            'projects'
+            'projects.tags',
+            'projects.images'
         ];
     }
 
