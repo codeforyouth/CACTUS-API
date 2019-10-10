@@ -17,7 +17,9 @@ class CreateProjectsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name', 50);
             $table->string('copy', 200);
-            $table->text('description');
+            $table->text('problem');
+            $table->text('solution');
+            $table->text('todo');
             $table->text('link');
             $table->text('github_url');
             $table->integer('user_id');
