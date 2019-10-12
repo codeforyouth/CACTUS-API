@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Project extends Model
 {
-    protected $fillable = ['description', 'link', 'github_url', 'user_id', 'status'];
+    protected $fillable = ['name', 'copy', 'problem', 'solution', 'todo', 'link', 'github_url', 'user_id', 'status'];
 
     public function tags()
     {

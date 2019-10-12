@@ -24,4 +24,11 @@ class ProjectService
         return $this->project_repository->getProjectById($project_id);
 
     }
+
+    public function createProject($params){
+
+        $project_id = $this->project_repository->createProject($params);
+        return $this->project_repository->getProjectById($project_id);
+
+    }
 }

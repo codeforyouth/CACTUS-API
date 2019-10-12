@@ -12,3 +12,11 @@ use Illuminate\Http\Request;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+//projects
+Route::get  ('/projects',              'ProjectController@index');
+Route::post  ('/projects',              'ProjectController@store');
+Route::get  ('/projects/{project_id}', 'ProjectController@show' );
+
+Route::get  ('/tags/{tag_name}', 'TagController@show');
+

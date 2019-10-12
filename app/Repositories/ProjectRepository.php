@@ -47,4 +47,18 @@ class ProjectRepository
 
         return $data;
     }
+
+    public function createProject($params)
+    {
+        $model = $this->project::create($params);
+        #tagとのリレーション作成
+        if(isset($params['tags'])){
+            $model->tags()->sync($params['tags']);
+        }
+        #imagesとのリレーション作成
+        if(isset($params['images'])){
+            $model->images()->createMany($params['images']);
+        }
+        return $model->id;
+    }
 }

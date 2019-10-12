@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\Projects\IndexRequest;
 use App\Http\Requests\Projects\ShowRequest;
+use App\Http\Requests\Projects\StoreRequest;
 
 use App\Services\ProjectService;
 
@@ -37,5 +38,13 @@ class ProjectController extends Controller
 
         return response($res);
 
+    }
+
+    public function store(StoreRequest $request)
+    {
+        $res = $this->project_service->createProject(
+            $request->validated()
+        );
+        return $res;
     }
 }
