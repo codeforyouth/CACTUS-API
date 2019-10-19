@@ -18,5 +18,7 @@ Route::get  ('/projects',              'ProjectController@index');
 Route::post  ('/projects',              'ProjectController@store');
 Route::get  ('/projects/{project_id}', 'ProjectController@show' );
 
+Route::get  ('/problems/{problem_id}', 'ProblemController@show' );
+
 Route::get  ('/tags/{tag_name}', 'TagController@show');
 
