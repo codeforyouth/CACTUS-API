@@ -27,6 +27,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Project');
     }
 
+    public function solutions()
+    {
+        return $this->hasMany('App\Models\Solution');
+    }
+
     public function createToken(){
         $token = bin2hex(openssl_random_pseudo_bytes(16));
         $this->where('id', $this->id)->update(['remember_token' => $token]);

@@ -5,11 +5,21 @@ use App\Models\User;
 
 class UserRepository
 {
+
+    private $user;
+
     public function __construct(
         User $user
     )
     {
         $this->user = $user;
+    }
+
+    private function _getRelation()
+    {
+        return [
+            'solutions.problem'
+        ];
     }
 
 
@@ -35,7 +45,7 @@ class UserRepository
 
     public function getUserById($user_id)
     {
-        $model = $this->user;
+        $model = $this->user::with($this->_getRelation());
         $data = $model
             ->where('id', $user_id)
             ->firstOrFail()
