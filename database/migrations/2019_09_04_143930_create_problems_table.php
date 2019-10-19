@@ -17,7 +17,9 @@ class CreateProblemsTable extends Migration
             $table->bigIncrements('id');
             $table->string('title', 200);
             $table->integer('project_id');
-            $table->text('descripton');
+            $table->text('issue');
+            $table->text('description');
+            $table->text('hint');
             $table->timestamps();
         });
     }
