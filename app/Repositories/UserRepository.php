@@ -23,6 +23,27 @@ class UserRepository
     }
 
 
+    public function getUserByToken($token)
+    {
+        $model = $this->user;
+        $data = $model
+            ->where('remember_token', $token)
+            ->firstOrFail()
+            ->toArray();
+        return $data;
+    }
+
+    public function getUserById($user_id)
+    {
+        $model = $this->user;
+        $data = $model
+            ->where('id', $user_id)
+            ->firstOrFail()
+            ->toArray();
+        return $data;
+    }
+
+
     public function createUser(array $params)
     {
         $model = $this->user::create($params);
