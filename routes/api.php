@@ -15,10 +15,11 @@ use Illuminate\Http\Request;
 
 //projects
 Route::get  ('/projects',              'ProjectController@index');
-Route::post  ('/projects',              'ProjectController@store');
+Route::post ('/projects',              'ProjectController@store');
 Route::get  ('/projects/{project_id}', 'ProjectController@show' );
 
 Route::get  ('/problems/{problem_id}', 'ProblemController@show' );
+Route::post ('/problems/{problem_id}/solutions', 'Problem\SolutionController@store');
 
 Route::get  ('/tags/{tag_name}', 'TagController@show');
 

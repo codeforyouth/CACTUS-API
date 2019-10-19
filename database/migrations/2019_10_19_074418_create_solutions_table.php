@@ -17,8 +17,8 @@ class CreateSolutionsTable extends Migration
             $table->bigIncrements('id');
             $table->text('repository_url');
             $table->text('link');
-            $table->text('note');
-            $table->integer('issue_id');
+            $table->text('note')->nullable();
+            $table->integer('problem_id');
             $table->integer('user_id');
             $table->timestamps();
         });
