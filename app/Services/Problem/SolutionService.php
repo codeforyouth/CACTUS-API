@@ -19,4 +19,10 @@ class SolutionService
         return $this->solution_repository->getSolutionById($solution_id);
 
     }
+
+    public function getSolutionById($solution_id){
+
+        return $this->solution_repository->getSolutionById($solution_id);
+
+    }
 }

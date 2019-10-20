@@ -16,7 +16,7 @@ class SolutionRepository
     private function _getRelation()
     {
         return [
-
+            'problem'
         ];
     }
 

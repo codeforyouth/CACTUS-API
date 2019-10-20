@@ -20,6 +20,8 @@ Route::get  ('/projects/{project_id}', 'ProjectController@show' );
 
 Route::get  ('/problems/{problem_id}', 'ProblemController@show' );
 
+Route::get  ('/solutions/{solution_id}', 'Problem\SolutionController@show' );
+
 Route::get  ('/tags/{tag_name}', 'TagController@show');
 
 //認証関連

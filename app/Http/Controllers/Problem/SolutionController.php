@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Problem;
 
 use App\Http\Requests\Problems\Solutions\StoreRequest;
+use App\Http\Requests\Problems\Solutions\ShowRequest;
 
 use App\Http\Controllers\Controller;
 
@@ -16,6 +17,16 @@ class SolutionController extends Controller
     public function __construct(SolutionService $solution_service)
     {
         $this->solution_service = $solution_service;
+    }
+
+    public function show(ShowRequest $request){
+
+        $res = $this->solution_service->getSolutionById(
+            $request->route('solution_id')
+        );
+
+        return response($res);
+
     }
 
     public function store(StoreRequest $request)
